@@ -1,0 +1,57 @@
+.body {
+  max-width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 70px;
+}
+
+.work {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* The .blocks div has NO size, it's just a wrapper */
+.blocks {
+  display: inline-block;
+  border-radius: 0;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+}
+
+/* The image controls everything */
+.blocks img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blocks img:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 8px 20px rgba(156, 10, 247, 0.3);
+  cursor: pointer;
+}
+
+.App-heading {
+  background-color: #121212;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(15px + 2vmin);
+  color: white;
+}
+
+.main-body {
+  padding-top: 100px;
+}
