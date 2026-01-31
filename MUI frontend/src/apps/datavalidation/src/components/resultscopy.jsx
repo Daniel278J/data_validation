@@ -11,9 +11,8 @@ function Result1Page() {
     const { result_data } = location.state || {};
     const actual_data = result_data[0];
     const output_data = result_data[1];
-    // const optimal_list =  ['', 'Ye
-    // es', 'No', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'No']
-    const optimal_text = ['', 'Schema is Valid i.e all the columns are matched and primary key is also matched and the data types are also matched', 'All columns from the source are in target database', 'All columns in the target are from source', 'All datatypes are matched', 'Both have same primary key', 'All the actual data in the table are perfectly matched', 'There are no missing rows', 'There are no additional rows other than from source', 'All data in the table is  matched']
+    const optimal_list =  ['', 'Yes', 'No', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'No']
+    // const optimal_text = ['', 'Schema is Valid i.e all the columns are matched and primary key is also matched and the data types are also matched', 'All columns from the source are in target database', 'All columns in the target are from source', 'All datatypes are matched', 'Both have same primary key', 'All the actual data in the table are perfectly matched', 'There are no missing rows', 'There are no additional rows other than from source', 'All data in the table is  matched']
     const failure_text = ['', 'Schema is not valid', 'The following columns are missing in the target database:', 'The following columns are not present in source but present in target database:', "The following columns' datatypes is mismatched:", 'Primary key is diferent in both databases', 'The data is not perfectly matched', 'The rows with following primary keys are not present in target:', 'The rows with following primary keys are not present in source but present in target:', 'The data in the following columns and there corresponding primary key row are mismatch:']
     const [showMismatchDialog, setShowMismatchDialog] = useState(false);
     const handleCloseMismatch = () => setShowMismatchDialog(false);
