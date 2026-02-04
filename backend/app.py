@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)  # enable CORS for frontend access
 
 
-@app.route('/validate',methods=['POST'])
+@app.route('/api/validate',methods=['POST'])
 def routing():
     data = request.get_json()
     # print(data)

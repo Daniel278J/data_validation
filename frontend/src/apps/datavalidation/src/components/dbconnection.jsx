@@ -31,7 +31,7 @@ function Dbconnection() {
   const simple = async () => {
     try {
       setLoading(true);
-      const res = await axios.post(`http://localhost:5000/validate`, {
+      const res = await axios.post(process.env.REACT_APP_API_URL + '/api/validate', {
         src: src,
         des: des,
         host_src: host_src,
