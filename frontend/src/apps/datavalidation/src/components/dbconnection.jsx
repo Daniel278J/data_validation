@@ -7,7 +7,7 @@ import {
   Box, Typography, Divider, Grid, TextField, Select, MenuItem, Button, FormControl, InputLabel, Paper, CircularProgress
 } from '@mui/material';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function Dbconnection() {
 
@@ -31,7 +31,7 @@ function Dbconnection() {
   const simple = async () => {
     try {
       setLoading(true);
-      const res = await axios.post(process.env.REACT_APP_API_URL + '/api/validate', {
+      const res = await axios.post(API_BASE_URL + '/api/validate', {
         src: src,
         des: des,
         host_src: host_src,
