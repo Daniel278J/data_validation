@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    image: data_validation_backend:latest
+    container_name: backend
+    ports:
+      - "5000:5000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - data_validation_net
+
+  frontend:
+    build: ./frontend
+    image: data_validation_frontend:latest
+    ports:
+      - "80:80"
+    container_name: frontend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - data_validation_net
+
+networks:
+  data_validation_net:
+    name: data_validation_net
+    driver: bridge
